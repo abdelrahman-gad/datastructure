@@ -1,22 +1,33 @@
-// task 1 javascript.info -> translate border-left-width to translateBorderLeftWidth
-//  
-function camilize(str){
-// 1- split string to array 
-//     let wordsArr = str.split('-');
-// // 2- loop throgh every word [elem] and check the first elem id alphabet
-//     let modifiedWordsArr=wordsArr.map( word => {
-//         // test that first word
-//         return word[0].toUpperCase() + word.slice(1);       
-//     })
-//     console.log(modifiedWordsArr);
-
-  return str.split('-').map(word=>word[0].toUpperCase()+word.slice(1)).join('');
+//  task 2 git flitered array of numbers based on rang
 
 
 
+let arr = [1,3, 4 , 5 ,6,7];
+
+let filterArray=function(arr , range1 , range2 ){
+    let filteredArr = arr.filter( function(item){
+    // case1 -> range1  < range2 
+       let matchingItem;
+        if(range1<range2){
+            matchingItem = item >=range1 && item <=range2;
+        }else{
+            matchingItem = item <=range1 && item >=range2;
+        }   
+        return matchingItem;
+    });
+    return filteredArr;
 }
 
-const result =  camilize('border-left-window');
-
-
+let result = filterArray(arr , 6,3 );
 console.log(result);
+
+
+
+
+
+
+
+
+
+
+
