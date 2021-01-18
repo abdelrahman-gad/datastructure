@@ -1,0 +1,1 @@
+# applying on  datastrucure in javascript
